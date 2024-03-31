@@ -1,0 +1,6 @@
+@font-face {font-family: 'SV Basic Manual'; src: url('SV Basic Manual.woff2'); font-display: swap}
+
+
+p, input {
+    font-family: 'SV Basic Manual', monospace
+}
