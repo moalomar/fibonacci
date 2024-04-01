@@ -25,4 +25,25 @@ function main()
 }
 
 
-//.replace(/\D/g, '')
+const INPUT = document.querySelector('input')
+const P = document.querySelector('p')
+
+
+function main2() {
+    
+    INPUT.value = INPUT.value.replace(/\D/g, '')
+    P.textContent = ''
+
+    if (INPUT.value.length == 0) return
+    
+    n = BigInt(INPUT.value)
+    fibonacci_n = localStorage.getItem(n)
+
+    if (fibonacci_n == null) {
+        fibonacci_n = fibonacci(n)
+        localStorage.setItem(n, fibonacci_n)
+    }
+
+    P.textContent = fibonacci_n
+
+}
